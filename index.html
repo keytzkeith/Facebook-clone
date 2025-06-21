@@ -8,31 +8,36 @@
     <title>Facebook Clone</title>
 </head>
 <body>
-
     <!-- nav section -->
     <nav class="top">
         <div class="fixed">
             <div class="modes">
-                <div class=" mode basic-mode"><i class="fas fa-gift"></i><h3>Basic mode plus</h3></div>
-                <div class="mode data-mode"><i class="fas fa-podcast"></i><h3>Buy data</h3></div>
+                <div class="mode basic-mode">
+                    <i class="fas fa-gift"></i>
+                    <h3>Basic mode plus</h3>
+                </div>
+                <div class="mode data-mode">
+                    <i class="fas fa-podcast"></i>
+                    <h3>Buy data</h3>
+                </div>
             </div>
     
             <div class="main-header">
                 <div class="top-content">
                     <h3>facebook</h3>
                     <div class="top-content-icons">
-                        <i class="fas fa-plus"></i>
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-plus" id="addBtn"></i>
+                        <i class="fas fa-search" id="searchBtn"></i>
+                        <i class="fas fa-bars" id="menuBtn"></i>
                     </div>
                 </div>
                 <div class="middle-content">
-                    <i class="active fas fa-home"><span>15+</span></i>
-                    <i class="fas fa-user-friends"></i>
-                    <i class="fas fa-comment"><span>12</span></i>
-                    <i class="fas fa-bell"><span>12+</span></i>
-                    <i class="fas fa-desktop"><i class="fas fa-play"></i></i>
-                    <i class="fas fa-box"></i>
+                    <i class="active fas fa-home" id="homeBtn"><span>15+</span></i>
+                    <i class="fas fa-user-friends" id="friendsBtn"></i>
+                    <i class="fas fa-comment" id="messagesBtn"><span>12</span></i>
+                    <i class="fas fa-bell" id="notificationsBtn"><span>12+</span></i>
+                    <i class="fas fa-desktop" id="watchBtn"><i class="fas fa-play"></i></i>
+                    <i class="fas fa-box" id="marketplaceBtn"></i>
                 </div>
             </div>
         </div>
@@ -40,219 +45,535 @@
             <i class="main-profile">
                 <img src="images/profile4.png" alt="myprofile">
             </i>
-            <input type="text" name="feed" id="feed" placeholder="What's on your mind">
-            <i class="fas fa-camera"><span>Photos</span></i>
+            <input type="text" name="feed" id="feed" placeholder="What's on your mind?">
+            <i class="fas fa-camera" id="photoBtn"><span>Photos</span></i>
         </div>
     </nav>
 
+    <!-- Search overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <i class="fas fa-arrow-left" id="closeSearch"></i>
+                <input type="text" placeholder="Search Facebook" id="searchInput">
+            </div>
+            <div class="search-results">
+                <div class="search-category">
+                    <h4>Recent searches</h4>
+                    <div class="search-item">
+                        <img src="images/profile1.png" alt="">
+                        <span>Sparser M</span>
+                    </div>
+                    <div class="search-item">
+                        <img src="images/profile2.png" alt="">
+                        <span>Freddy fred</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <div class="menu-header">
+                <h3>Menu</h3>
+                <i class="fas fa-times" id="closeMenu"></i>
+            </div>
+            <div class="menu-content">
+                <div class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- story section -->
     <section class="story-section" id="story">
-        <div class="stories story1"><img src="images/story1.png" alt=""><div class="cover"></div><div class="wrap"><i class="fas fa-plus"></i><h3>Add to story</h3></div></div>
-        <div class="stories story2"><p class="n-of-story">2</p><img src="images/story2.png" alt=""><p>Powell <br>Ambasa</p></div>
-        <div class="stories story3"><p class="n-of-story">4</p><img src="images/story3.png" alt=""><p>Mn <br>Ke</p></div>
-        <div class="stories story4"><p class="n-of-story">1</p><img src="images/story4.png" alt=""><p>Gloria <br>Bala</p></div>
-        <div class="stories story5"><p class="n-of-story">3</p><img src="images/story5.png" alt=""><p>James <br>Ke</p></div>
-        <div class="stories story6"><p class="n-of-story">1</p><img src="images/story6.png" alt=""><p>Denitro <br>Danzo</p></div>
-        <div class="stories story7"><p class="n-of-story">2</p><img src="images/story7.png" alt=""><p>Night <br>Nurse</p></div>
-        <div class="stories story8"><p class="n-of-story">1</p><img src="images/story8.png" alt=""><p>Sklinter <br>G</p></div>
-        <div class="stories story9"><p class="n-of-story">1</p><img src="images/story9.png" alt=""><p>Cool <br>Kid</p></div>
-        <div class="stories story9"><p class="n-of-story">1</p><img src="images/profile10.png" alt=""><p>Fire <br>Bender</p></div>
-        <div class="stories story9"><p class="n-of-story">4</p><img src="images/profile11.png" alt=""><p>Brio <br>Sambe</p></div>
-        <div class="stories story9"><p class="n-of-story">2</p><img src="images/profile12.png" alt=""><p>Vikie <br>vikx</p></div>
-        <div class="stories story9"><p class="n-of-story">2</p><img src="images/profile13.png" alt=""><p>Major <br>Gero</p></div>
-        <div class="stories story9"><p class="n-of-story">5</p><img src="images/profile14.png" alt=""><p>Spensor <br>miles</p></div>
-        <div class="stories story9"><p class="n-of-story">3</p><img src="images/profile15.png" alt=""><p>Anna <br>Eli</p></div>
-        <div class="stories story9"><p class="n-of-story">1</p><img src="images/profile16.png" alt=""><p>Treida <br>Ktown</p></div>
+        <div class="stories story1" data-story="add">
+            <img src="images/story1.png" alt="">
+            <div class="cover"></div>
+            <div class="wrap">
+                <i class="fas fa-plus"></i>
+                <h3>Add to story</h3>
+            </div>
+        </div>
+        <div class="stories story2" data-story="view">
+            <p class="n-of-story">2</p>
+            <img src="images/story2.png" alt="">
+            <p>Powell <br>Ambasa</p>
+        </div>
+        <div class="stories story3" data-story="view">
+            <p class="n-of-story">4</p>
+            <img src="images/story3.png" alt="">
+            <p>Mn <br>Ke</p>
+        </div>
+        <div class="stories story4" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/story4.png" alt="">
+            <p>Gloria <br>Bala</p>
+        </div>
+        <div class="stories story5" data-story="view">
+            <p class="n-of-story">3</p>
+            <img src="images/story5.png" alt="">
+            <p>James <br>Ke</p>
+        </div>
+        <div class="stories story6" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/story6.png" alt="">
+            <p>Denitro <br>Danzo</p>
+        </div>
+        <div class="stories story7" data-story="view">
+            <p class="n-of-story">2</p>
+            <img src="images/story7.png" alt="">
+            <p>Night <br>Nurse</p>
+        </div>
+        <div class="stories story8" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/story8.png" alt="">
+            <p>Sklinter <br>G</p>
+        </div>
+        <div class="stories story9" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/story9.png" alt="">
+            <p>Cool <br>Kid</p>
+        </div>
+        <div class="stories story10" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/profile10.png" alt="">
+            <p>Fire <br>Bender</p>
+        </div>
+        <div class="stories story11" data-story="view">
+            <p class="n-of-story">4</p>
+            <img src="images/profile11.png" alt="">
+            <p>Brio <br>Sambe</p>
+        </div>
+        <div class="stories story12" data-story="view">
+            <p class="n-of-story">2</p>
+            <img src="images/profile12.png" alt="">
+            <p>Vikie <br>vikx</p>
+        </div>
+        <div class="stories story13" data-story="view">
+            <p class="n-of-story">2</p>
+            <img src="images/profile13.png" alt="">
+            <p>Major <br>Gero</p>
+        </div>
+        <div class="stories story14" data-story="view">
+            <p class="n-of-story">5</p>
+            <img src="images/profile14.png" alt="">
+            <p>Spensor <br>miles</p>
+        </div>
+        <div class="stories story15" data-story="view">
+            <p class="n-of-story">3</p>
+            <img src="images/profile15.png" alt="">
+            <p>Anna <br>Eli</p>
+        </div>
+        <div class="stories story16" data-story="view">
+            <p class="n-of-story">1</p>
+            <img src="images/profile16.png" alt="">
+            <p>Treida <br>Ktown</p>
+        </div>
     </section>
+
+    <!-- Story viewer modal -->
+    <div class="story-viewer" id="storyViewer">
+        <div class="story-viewer-container">
+            <div class="story-viewer-header">
+                <div class="story-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="story-info">
+                    <img src="" alt="" id="storyUserImg">
+                    <span id="storyUserName"></span>
+                    <span id="storyTime">2h</span>
+                </div>
+                <i class="fas fa-times" id="closeStoryViewer"></i>
+            </div>
+            <div class="story-content">
+                <img src="" alt="" id="storyImage">
+            </div>
+            <div class="story-controls">
+                <i class="fas fa-chevron-left" id="prevStory"></i>
+                <i class="fas fa-chevron-right" id="nextStory"></i>
+            </div>
+        </div>
+    </div>
 
     <!-- post section -->
     <section class="posts">
-        <div class="post post1">
+        <div class="post post1" data-post-id="1">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile1.png" alt="">
                     </div>
-                    <span><h3>Sparser M</h3><p>16m <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Sparser M</h3>
+                        <p>16m <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>Awesomeness 🐕💯</p>
-                <img src="images/feed1.png" alt="">
+                <img src="images/feed1.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>Mickiey J and 15k others</p>
+                    <p>Mickiey J and <span class="like-count">15k</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i class="far fa-thumbs-up"></i> <span>15k</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>6k</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span>2k</span></div>
+                <div class="liked-icon like-btn" data-liked="false">
+                    <i class="far fa-thumbs-up"></i> 
+                    <span>15k</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>6k</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span>2k</span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list">
+                    <div class="comment">
+                        <img src="images/profile2.png" alt="">
+                        <div class="comment-content">
+                            <span class="comment-author">Freddy fred</span>
+                            <p>Amazing shot! 🔥</p>
+                            <div class="comment-actions">
+                                <span>Like</span>
+                                <span>Reply</span>
+                                <span>2h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="post post2">
+
+        <div class="post post2" data-post-id="2">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile2.png" alt="">
                     </div>
-                    <span><h3>Freddy fred</h3><p>1m <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Freddy fred</h3>
+                        <p>1m <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>Hello friends 🖐️</p>
-                <img src="images/feed2.png" alt="">
+                <img src="images/feed2.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>You and 2k others</p>
+                    <p>You and <span class="like-count">2k</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i style="color: #3e60fa;" class="fas fa-thumbs-up"></i> <span>2k</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>655</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span>4</span></div>
+                <div class="liked-icon like-btn" data-liked="true">
+                    <i style="color: #3e60fa;" class="fas fa-thumbs-up"></i> 
+                    <span>2k</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>655</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span>4</span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list"></div>
             </div>
         </div>
-        <div class="post post3">
+
+        <div class="post post3" data-post-id="3">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile3.png" alt="">
                     </div>
-                    <span><h3>Drixller</h3><p>2h <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Drixller</h3>
+                        <p>2h <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>#beytubeArtz</p>
-                <img src="images/feed3.png" alt="">
+                <img src="images/feed3.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>Sparser and 112k others</p>
+                    <p>Sparser and <span class="like-count">112k</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i class="far fa-thumbs-up"></i> <span>112k</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>15k</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span>2k</span></div>
+                <div class="liked-icon like-btn" data-liked="false">
+                    <i class="far fa-thumbs-up"></i> 
+                    <span>112k</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>15k</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span>2k</span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list"></div>
             </div>
         </div>
-        <div class="post post4">
+
+        <div class="post post4" data-post-id="4">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile5.png" alt="">
                     </div>
-                    <span><h3>Winnie Artz</h3><p>6h <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Winnie Artz</h3>
+                        <p>6h <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>Let's crush em 👊👊</p>
-                <img src="images/feed4.png" alt="">
+                <img src="images/feed4.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>Jennifer Jones and 2m others</p>
+                    <p>Jennifer Jones and <span class="like-count">2m</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i class="far fa-thumbs-up"></i> <span>15m</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>232k</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span>103k</span></div>
+                <div class="liked-icon like-btn" data-liked="false">
+                    <i class="far fa-thumbs-up"></i> 
+                    <span>15m</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>232k</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span>103k</span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list"></div>
             </div>
         </div>
-        <div class="post post5">
+
+        <div class="post post5" data-post-id="5">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile6.png" alt="">
                     </div>
-                    <span><h3>Agella</h3><p>1m <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Agella</h3>
+                        <p>1m <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>Cool kid 💯<br>#lilangel</p>
-                <img src="images/feed5.png" alt="">
+                <img src="images/feed5.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>Mickiey J and 895 others</p>
+                    <p>Mickiey J and <span class="like-count">895</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i class="far fa-thumbs-up"></i> <span>895</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>19k</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span>4k</span></div>
+                <div class="liked-icon like-btn" data-liked="false">
+                    <i class="far fa-thumbs-up"></i> 
+                    <span>895</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>19k</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span>4k</span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list"></div>
             </div>
         </div>
-        <div class="post post6">
+
+        <div class="post post6" data-post-id="6">
             <div class="profile">
                 <div class="left-side">
                     <div class="profile-pic">
                         <img src="images/profile7.png" alt="">
                     </div>
-                    <span><h3>Sparser M</h3><p>16m <sup>.</sup> <i class="fas fa-globe-africa"></i></p></span>
+                    <span>
+                        <h3>Sparser M</h3>
+                        <p>16m <sup>.</sup> <i class="fas fa-globe-africa"></i></p>
+                    </span>
                 </div>
                 <div class="right-side">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h post-menu-btn"></i>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
 
             <div class="post-content">
                 <p>Bored</p>
-                <img src="images/feed7.png" alt="">
+                <img src="images/feed7.png" alt="" class="post-image">
                 <span class="icons">
                     <i style="font-style: normal;">😄</i>
                     <i style="font-style: normal;">👍</i>
                     <i style="font-style: normal;">❤️</i>
-                    <p>Clara and 18k others</p>
+                    <p>Clara and <span class="like-count">18k</span> others</p>
                 </span>
             </div>
 
             <div class="liked">
-                <div class="liked-icon"><i class="far fa-thumbs-up"></i> <span>18k</span></div>
-                <div class="liked-icon"><i class="far fa-comment"></i> <span>15k</span></div>
-                <div class="liked-icon"><i class="fas fa-share"></i> <span></span></div>
+                <div class="liked-icon like-btn" data-liked="false">
+                    <i class="far fa-thumbs-up"></i> 
+                    <span>18k</span>
+                </div>
+                <div class="liked-icon comment-btn">
+                    <i class="far fa-comment"></i> 
+                    <span>15k</span>
+                </div>
+                <div class="liked-icon share-btn">
+                    <i class="fas fa-share"></i> 
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="comments-section" style="display: none;">
+                <div class="comment-input">
+                    <img src="images/profile4.png" alt="">
+                    <input type="text" placeholder="Write a comment...">
+                    <i class="fas fa-paper-plane send-comment"></i>
+                </div>
+                <div class="comments-list"></div>
             </div>
         </div>
     </section>
+
+    <!-- Post menu modal -->
+    <div class="post-menu-modal" id="postMenuModal">
+        <div class="post-menu-content">
+            <div class="post-menu-item">
+                <i class="fas fa-bookmark"></i>
+                <span>Save post</span>
+            </div>
+            <div class="post-menu-item">
+                <i class="fas fa-eye-slash"></i>
+                <span>Hide post</span>
+            </div>
+            <div class="post-menu-item">
+                <i class="fas fa-user-times"></i>
+                <span>Unfollow</span>
+            </div>
+            <div class="post-menu-item">
+                <i class="fas fa-flag"></i>
+                <span>Report post</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="spinner"></div>
+        <p>Loading more posts...</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
